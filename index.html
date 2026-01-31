@@ -1,184 +1,100 @@
 <!DOCTYPE html>
-<!-- This tells the browser: "This is an HTML5 document" -->
-
 <html lang="en">
-<!-- The main container for the entire webpage. lang="en" means content is in English -->
-
 <head>
-    <!-- HEAD section: Contains metadata and settings (not visible on the page) -->
-    
     <meta charset="UTF-8">
-    <!-- Character encoding: Tells browser to use UTF-8 (supports all languages, emojis, special characters) -->
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Makes website responsive (mobile-friendly). Sets zoom level to 1.0 on mobile devices -->
-    
     <title>Ilinca's DevOps Journey</title>
-    <!-- Text that appears in browser tab -->
+    
+    <!-- Font Awesome Icons (only for social links) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* CSS STYLES - This is where we define how things look */
-        /* Format: selector { property: value; } */
-        
-        /* ========================================
-           BODY STYLES - Main page container
-           ======================================== */
         body {
-            /* font-family: What font to use for all text */
             font-family: Arial, sans-serif;
-            /* Arial first, if not available use any sans-serif font */
-            
-            /* max-width: Maximum width of content (keeps text readable, not stretched across huge monitors) */
             max-width: 800px;
-            /* 800 pixels wide maximum */
-            
-            /* margin: Space around the content */
             margin: 50px auto;
-            /* 50px top/bottom, "auto" left/right = centers the content */
-            
-            /* padding: Space inside the container (between content and edges) */
             padding: 20px;
-            /* 20 pixels of breathing room on all sides */
-            
-            /* background-color: Page background color */
             background-color: #f4f4f4;
-            /* Light gray (#f4f4f4 is hex color code) */
         }
         
-        /* ========================================
-           HEADING 1 (h1) - Main title
-           ======================================== */
         h1 {
-            /* color: Text color */
-            color: #090311;
-            /* Dark blue-gray */
-            
-            /* border-bottom: Line under the text */
-            border-bottom: 3px solid #000000;
-            /* 3 pixels thick, solid line, bright blue color */
-            
-            /* padding-bottom: Space between text and bottom border */
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
-            /* 10 pixels of space */
         }
         
-        /* ========================================
-           HEADING 2 (h2) - Section titles
-           ======================================== */
         h2 {
-            /* color: Text color for all section headings */
             color: #3498db;
-            /* Bright blue (matches the h1 border) */
-            
-            /* margin-top: Space above the heading */
             margin-top: 30px;
-            /* 30 pixels above (separates sections) */
         }
         
-        /* ========================================
-           .skills CLASS - White content boxes
-           ======================================== */
         .skills {
-            /* Classes in CSS start with a dot (.) */
-            /* This applies to any element with class="skills" */
-            
-            /* background: Background color */
             background: white;
-            /* Pure white background */
-            
-            /* padding: Space inside the box */
             padding: 20px;
-            /* 20 pixels on all sides */
-            
-            /* border-radius: Rounded corners */
             border-radius: 8px;
-            /* 8 pixels of rounding (makes sharp corners smooth) */
-            
-            /* box-shadow: Drop shadow effect (makes box look elevated) */
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            /* 0px horizontal, 2px down, 4px blur, black color at 10% opacity */
-            /* This creates a subtle shadow below the box */
+            margin-bottom: 20px;
         }
         
-        /* ========================================
-           .skills ul - Unordered lists inside .skills boxes
-           ======================================== */
         .skills ul {
-            /* This targets <ul> elements that are INSIDE .skills elements */
-            
-            /* list-style-type: What kind of bullet points to use */
             list-style-type: none;
-            /* "none" = no bullets (we'll style the list items ourselves) */
-            
-            /* padding: Space inside the list container */
             padding: 0;
-            /* Remove default padding */
         }
         
-        /* ========================================
-           .skills li - Individual list items in .skills
-           ======================================== */
         .skills li {
-            /* Each item in the list (<li>) */
-            
-            /* padding: Space inside each list item */
             padding: 10px;
-            /* 10 pixels on all sides */
-            
-            /* margin: Space between list items */
             margin: 5px 0;
-            /* 5 pixels top/bottom, 0 left/right */
-            
-            /* background: Background color of each item */
             background: #ecf0f1;
-            /* Very light gray */
-            
-            /* border-left: Colored bar on the left side */
-            border-left: 4px solid #2cca2c;
-            /* 4 pixels thick, solid, bright blue */
-            /* This creates a nice accent stripe on the left */
+            border-left: 4px solid #3498db;
         }
         
-        /* ========================================
-           .learning CLASS - Green highlight boxes
-           ======================================== */
         .learning {
-            /* Green-tinted boxes for "currently learning" sections */
-            
-            /* background: Light green background */
-            background: #bae9cc;
-            /* Very pale green (#e8f5e9) */
-            
-            /* padding: Space inside the box */
+            background: #e8f5e9;
             padding: 15px;
-            /* 15 pixels on all sides */
-            
-            /* border-radius: Rounded corners */
             border-radius: 8px;
-            /* 8 pixels of rounding */
-            
-            /* margin-top: Space above this box */
             margin-top: 20px;
-            /* 20 pixels above (separates from previous content) */
         }
+        
+        .learning ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .learning li {
+            padding: 5px 0;
+        }
+        
+        /* Styles for social links */
+        .skills a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .skills a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        /* Make Font Awesome icons bigger and add spacing */
+        .skills i.fab,
+        .skills i.fas {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        /* Colored social icons */
+        .fa-linkedin { color: #0077b5; }
+        .fa-github { color: #333; }
+        .fa-envelope { color: #ea4335; }
     </style>
 </head>
-
 <body>
-    <!-- BODY section: Everything visible on the webpage goes here -->
-    
-    <!-- Main title with emoji -->
     <h1>🚀 My DevOps Journey</h1>
     
-    <!-- First content box: Current Skills -->
+    <!-- KEPT EMOJIS HERE - They look better! -->
     <div class="skills">
-        <!-- div = generic container, class="skills" applies the white box styling -->
-        
         <h2>Current Skills</h2>
-        <!-- Section heading -->
-        
         <ul>
-            <!-- Unordered list (bullet points, but we removed the bullets in CSS) -->
             <li>💻 Windows & Linux System Administration</li>
             <li>☁️ AWS Cloud Services</li>
             <li>🔐 Security Operations</li>
@@ -187,12 +103,10 @@
         </ul>
     </div>
 
-    <!-- Second content box: Currently Learning (green background) -->
+    <!-- KEPT EMOJIS HERE TOO -->
     <div class="learning">
         <h2>Currently Learning</h2>
         <p><strong>DevOps Engineering</strong></p>
-        <!-- <p> = paragraph, <strong> = bold text -->
-        
         <ul>
             <li>✅ Git Version Control</li>
             <li>✅ Docker Basics</li>
@@ -201,32 +115,37 @@
             <li>🔄 GitHub Actions</li>
         </ul>
     </div>
-    <!-- Goals box content-->
-    <div class="learning"> 
-    <h2>Goals for 2026</h2>
-     <p>Learn CI/CD Piepelines</p>
-     <p>Learn Terraform</p>
-    </div>
-    <!-- Third content box: About This Project -->
-    <h2>About This Project</h2>
-    <p>This website is containerized with Docker and version-controlled with Git - demonstrating fundamental DevOps practices!</p>
-    
-    <!-- Fourth content box: Today's Achievement (green background) -->
+
     <div class="learning">
         <h2>Today's Achievement</h2>
         <p>✅ Successfully built and deployed my first containerized website!</p>
         <p>Date: January 31, 2026</p>
     </div>
-
-    <!-- Footer section at the bottom -->
+    <p></p>
+    <!-- FONT AWESOME ONLY FOR SOCIAL LINKS - Professional look -->
+    <div class="skills">
+        <h2>📫 Let's Connect</h2>
+        <ul>
+            <li>
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/ilinca-gaman-aab1b9196/" target="_blank">LinkedIn Profile</a>
+            </li>
+            <li>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/ilincuct" target="_blank">GitHub: @ilincuct</a>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:your.email@example.com">Email Me</a>
+            </li>
+        </ul>
+    </div>
+    
+    <h2>About This Project</h2>
+    <p>This website is containerized with Docker and version-controlled with Git - demonstrating fundamental DevOps practices!</p>
+    
     <footer style="margin-top: 50px; text-align: center; color: #7f8c8d;">
-        <!-- Inline styles (styles written directly in the HTML element) -->
-        <!-- margin-top: 50px = space above footer -->
-        <!-- text-align: center = center the text -->
-        <!-- color: #7f8c8d = medium gray text color -->
-        
         <p>Built as part of my DevOps learning journey 🎯</p>
-        <p><a hraf="www.linkedin.com/in/ilinca-gaman-aab1b9196">💼 Connect with me on LinkedIn</a></p>
     </footer>
 </body>
 </html>
