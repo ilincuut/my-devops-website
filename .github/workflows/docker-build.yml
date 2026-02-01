@@ -37,5 +37,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ilincuct/my-devops-website:latest
-            ilincuct/my-devops-website:${{ github.sha }}
+            ilincuut/my-devops-website:latest
+            ilincuut/my-devops-website:${{ github.sha }}
