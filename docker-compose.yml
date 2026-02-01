@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  website:
+    # Always pull the latest image from Docker Hub
+    image: ilincuut/my-devops-website:latest
+    container_name: my-site
+    ports:
+      - "127.0.0.1:8080:80"
+    restart: unless-stopped
+    # Automatically pull new images
+    pull_policy: always
