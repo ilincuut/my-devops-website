@@ -1,5 +1,5 @@
 # 🚀 My DevOps Website
-
+![Build Status](https://github.com/ilincuut/my-devops-website/actions/workflows/docker-build.yml/badge.svg)
 My first containerized website built while learning DevOps engineering.
 
 ## 📋 What This Project Demonstrates
